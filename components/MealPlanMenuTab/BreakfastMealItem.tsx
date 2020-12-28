@@ -7,14 +7,8 @@ interface Props {
 }
 
 const BreakfastMealItem = (props: Props) => {
-
-    var _mealplans = mealplans.map((o: any) => {
-        if (o.planType === "Breakfast") {
-           return o;
-        }
-    });
-
-
+ 
+    var _mealplans = _.filter(mealplans, { 'planType': "Breakfast" });
     return (
         <div className="flex  flex-wrap items-center">
             {_mealplans.map((item: any) => {

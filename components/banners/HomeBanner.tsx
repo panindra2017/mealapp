@@ -1,13 +1,6 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel';
-
-interface Props {
-
-}
-
-const HomeBanner = (props: Props) => {
-
-
+const HomeBanner = () => {
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -31,11 +24,6 @@ const HomeBanner = (props: Props) => {
             partialVisibilityGutter: 40 
         }
     }
-
-
-
-
-
     return (
         <div>
             <Carousel
@@ -43,7 +31,6 @@ const HomeBanner = (props: Props) => {
                 draggable={false}
                 showDots={true}
                 responsive={responsive}
-             /*    ssr={true} // means to render carousel on server-side. */
                 infinite={true}
                 autoPlay={true}
                 autoPlaySpeed={10000}
@@ -51,14 +38,12 @@ const HomeBanner = (props: Props) => {
                 customTransition="all .5"
                 transitionDuration={10}
                 containerClass="carousel-container"
-                removeArrowOnDeviceType={["tablet", "mobile"]}
-                /*   deviceType={this.props.deviceType} */
+                removeArrowOnDeviceType={["tablet","mobile"]}
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
             >
                 <div><img src="/images/banners/1.jpg"/></div>
                 <div><img src="/images/banners/2.jpg"/></div>
-
                 <div><img src="/images/banners/3.jpg"/></div>
             </Carousel>
         </div>

@@ -4,15 +4,19 @@ interface Props {
 
 }
 
-const Itemcard = (props: Props) => {
+const Itemcard = (props: any) => {
     return (
-        <div className="flex items-center px-2 border-b pb-4 cursor-pointer focus:bg-gray-100">
-            <div><img src="/images/items/item-1.jpg" style={{ width: "100px", height: "100px" }} /></div>
+        <div className={`flex items-center px-2 py-2 border-b pb-4 cursor-pointer  ${props.isNext && props.isNext ? 'bg-green-100' : ""}`}>
+            <div><img src={props.images} style={{ width: "100px", height: "80px" }} /></div>
             <div className="flex flex-col px-4">
 
-                <h1 className="text-base font-semibold" > Idli Sambar Wiht Cutney</h1>
-                <div className="flex-1 py-2 text-sm"> 628 Cal, Vegan</div>
-            <div className="flex items-center">  <div className="flex-1 t">Rs 99 </div>  <div className=""><button className="text-sm border p-1 rounded bg-gray-50">Add To Cart</button> </div> </div>
+                <h1 className="text-sm font-semibold" >{props.name ? props.name : ""}</h1>
+                <div className="flex-1 py-2 text-sm"> - {props.veg ? "Veg" : " "} Calories :  {props.calorie ? props.calorie : ""}</div>
+                <div className="flex items-center">
+
+                    <div className="text-sm">  <span className="px-4 uppercase text-sm">
+                        {props.isNext && props.isNext ? 'Tomorrow' : props.serveOn}
+                    </span>  </div> </div>
             </div>      </div>
     )
 }

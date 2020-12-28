@@ -2,18 +2,17 @@ import React from 'react'
 import { mealplans } from '../../data/MealPlans'
 import MealPlanItem from '../Items/MealPlanItem'
 import _ from 'lodash'
+import { useRouter } from 'next/dist/client/router'
+
+
 interface Props {
 
 }
 
 const DinnerMealItem = (props: Props) => {
 
-    var _mealplans = mealplans.map((o: any) => {
-        if (o.planType === "Dinner") {
-           return o;
-        }
-    });
-
+    var _mealplans = _.filter(mealplans, { 'planType': "Dinner" });
+   
 
     return (
         <div className="flex  flex-wrap items-center">

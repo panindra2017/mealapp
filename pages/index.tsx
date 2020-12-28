@@ -1,5 +1,6 @@
 import React from 'react'
 import HomeBanner from '../components/banners/HomeBanner'
+import AccordianFaq from '../components/FAQ/AccordianFaq'
 import Itemcard from '../components/Items/Itemcard'
 import HomeMealPlanMenuTab from '../components/MealPlanMenuTab/HomeMealPlanMenuTab'
 import WhySubscribeScroller from '../components/whysubscribe/WhySubscribeScroller'
@@ -21,14 +22,7 @@ export default function Home() {
       </div>
 
 
-      <div className="flex flex-col my-2"> <Itemcard />
-        <Itemcard />
-        <Itemcard />
-        <Itemcard />
-        <Itemcard />
-        <Itemcard />
-        <Itemcard /></div>
-      <div></div>
+      <div><AccordianFaq/></div>
 
 
     </div></AppLayout>

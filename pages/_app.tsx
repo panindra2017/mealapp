@@ -3,6 +3,7 @@
 import type { AppProps /*, AppContext */ } from 'next/app'
 import '../styles/globals.css'
 import 'react-multi-carousel/lib/styles.css';
+import 'react-accessible-accordion/dist/fancy-example.css';
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
