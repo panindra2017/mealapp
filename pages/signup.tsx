@@ -62,7 +62,7 @@ const SubscribePage = () => {
                 </div>
 
                 <div className="mx-auto my-4">
-                    <SubscribeButton onSubmit={() => { addToCart({}) }} /></div>
+                    <SubscribeButton  tonSubmit={() => {  }} /></div>
 
             </div>
         </AppLayout>
