@@ -62,7 +62,7 @@ export const mealplans = [{
     {
 
         id: 17,
-        name: "",
+         name: "",
         calorie: "",
         veg: true,
         images: "/images/mealplan/power-breakfast-veg.jpg",
