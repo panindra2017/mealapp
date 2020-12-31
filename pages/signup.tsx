@@ -48,21 +48,19 @@ const SubscribePage = () => {
                 <div className="flex flex-col px-8 items-center shadow my-4 py-2" >
                     <div className=" flex-1 my-2">Subscription Start Date </div>
                     <div className="border p-1 flex">
-                    <div className="px-2"><DatePicker selected={startDate} onChange={(date: any) => setStartDate(date)} placeholderText="Pick a date to start delivering orders " /></div>
-                      <div className="px-2"><EditSvg size={24}/></div>
+                        <div className="px-2"><DatePicker selected={startDate} onChange={(date: any) => setStartDate(date)} placeholderText="Pick a date to start delivering orders " /></div>
+                        <div className="px-2"><EditSvg size={24} /></div>
                     </div>
                 </div>
                 <div className="flex flex-col px-8">
-                    <div className="flex flex-row px-8   ">
-                        <div className="flex-1">
-                            Item Total </div> 
-<div className="flex-1">
-<div className=""><OrderTotalSummary/></div>
 
-</div>
-                    </div>
-                    
-                        </div>
+
+                   
+                        <div className=""><OrderTotalSummary /></div>
+
+                
+                </div>
+
                 <div className="mx-auto my-4">
                     <SubscribeButton onSubmit={() => { addToCart({}) }} /></div>
 
