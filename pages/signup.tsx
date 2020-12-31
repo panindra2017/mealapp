@@ -1,18 +1,19 @@
 import React, { useContext } from 'react';
 import _ from 'lodash';
 import { AppLayout } from '../layout/AppLayout';
-import SignupForm from '../components/Signup/SignupForm';
 import SubscribeButton from '../components/Subscribe/SubscribeButton';
 import Datetime from "react-datetime"
 import { CartContext } from '../components/Cart/CartContextProvider';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { mealplans } from '../data/MealPlans';
 import useCookies from 'react-cookie/cjs/useCookies';
+import OrderSummary from '../components/Orders/OrderSummary';
+import ContactForm from '../components/Signup/ContactForm';
+import AddressForm from '../components/Signup/AddressForm';
 const SubscribePage = () => {
     const [orders, setorders] = useState(null)
-    const { cart, addToCart } = useContext(CartContext)
-    const [cookies, setCookie] = useCookies(['order'])
+    const { addToCart } = useContext(CartContext)
+    const [cookies] = useCookies(['order'])
     useEffect(() => {
         if (cookies.order !== null) {
 
@@ -20,7 +21,7 @@ const SubscribePage = () => {
         }
     }, [cookies])
 
-  
+
 
     useEffect(() => {
         console.log("orders ", orders)
@@ -31,19 +32,22 @@ const SubscribePage = () => {
             <div className="flex flex-col">
                 <div className="flex flex-col my-4 py-8  shadow items-center">
 
-                    <div>Order Summmary : </div>
-                    <div>{JSON.stringify(orders)}</div>
+
+                    <div><OrderSummary {...orders} /></div>
                 </div>
-                <div className="flex flex-row  ">
-                    <SignupForm />
+                <div className="flex flex-row  my-4">
+                    <ContactForm />
+                </div>
+                <div className="flex flex-row  my-8">
+                    <AddressForm />
                 </div>
 
                 <div className="flex flex-col px-8 items-center" >
-                    <div className=" flex-1 my-2">Starting Date</div>
-                    <div className="">    <Datetime className="border px-4" /> </div>
-
-
-
+                    <div className=" flex-1 my-2">Subscription Start Date</div>
+                    <div className="">
+                <Datetime className="border px-4" /> 
+                
+                </div>
                 </div>
 
                 <div className="flex flex-col px-8">
