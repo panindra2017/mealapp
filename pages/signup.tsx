@@ -13,9 +13,12 @@ import AddressForm from '../components/Signup/AddressForm';
 import DatePicker from "react-datepicker";
 import EditSvg from '../components/common/svgs/EditSvg';
 import OrderTotalSummary from '../components/Orders/OrderTotalSummary';
+import PayoutButton from '../components/Subscribe/PayOutButton';
+import { useRouter } from 'next/dist/client/router';
 const SubscribePage = () => {
     const [startDate, setStartDate] = useState(new Date());
     const [orders, setorders] = useState(null)
+    const router = useRouter();
     const { addToCart } = useContext(CartContext)
     const [cookies] = useCookies(['order'])
     useEffect(() => {
@@ -25,7 +28,11 @@ const SubscribePage = () => {
         }
     }, [cookies])
 
-
+    function onsubmit(data: any) {
+        if (data !== null) {
+            router.push(`/payment`)
+        }
+    }
 
     useEffect(() => {
         console.log("orders ", orders)
@@ -35,8 +42,6 @@ const SubscribePage = () => {
 
             <div className="flex flex-col">
                 <div className="flex flex-col my-4 py-8  shadow items-center">
-
-
                     <div><OrderSummary {...orders} /></div>
                 </div>
                 <div className="flex flex-row  my-4">
@@ -53,16 +58,10 @@ const SubscribePage = () => {
                     </div>
                 </div>
                 <div className="flex flex-col px-8">
-
-
-                   
-                        <div className=""><OrderTotalSummary /></div>
-
-                
+                    <div className=""><OrderTotalSummary /></div>
                 </div>
-
                 <div className="mx-auto my-4">
-                    <SubscribeButton  tonSubmit={() => {  }} /></div>
+                    <PayoutButton onSubmit={(e: any) => { onsubmit({}) }} /></div>
 
             </div>
         </AppLayout>
