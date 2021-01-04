@@ -33,7 +33,7 @@ const detail = () => {
     }
     return (
         <AppLayout><div className="flex flex-col">
-            <div className=" w-full -mt-4">
+            <div className=" w-full ">
                 <img src={meatPlan ? meatPlan.images : "#"} />
             </div>
             <div className="flex my-2 flex-col -mt-4 mx-2 shadow-xl bg-white rounded-3xl">

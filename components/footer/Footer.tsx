@@ -4,7 +4,7 @@ import TopLocationHolder from '../Location/TopLocationHolder'
 
 export const Footer = () => {
     return (
-        <div className="flex flex-col border-b   sm: shadow w-full  bg-red-800 text-white">
+        <div className="flex flex-col border-b   sm: shadow w-full bg-gray-800 text-white">
             <div className="px-4 py-4 ">
                 <img src="/images/boxmeal-logo.png" style={{ height: 50 }} />
             </div>
