@@ -11,16 +11,21 @@ export default function Home() {
   return (
     <AppLayout><div className="flex flex-col">
 
-      <div className="shadow-lg mb-4">
+      <div className="shadow-lg mb-2">
         <HomeBanner />
       </div>
-
+   
       <div >
         <HomeMealPlanMenuTab />
       </div>
+     
+     
+      <div className="">
+        <img src="/images/banners/why-meal-box.png" style={{width:'100%'}} ></img></div>
 
-      <div><AccordianFaq/></div>
-
+        <div className="  my-4 mb-4"><AccordianFaq /></div>
+      <div className="my-2 px-16">
+        <img src="/images/app-store.png" ></img></div>
     </div></AppLayout>
 
   )

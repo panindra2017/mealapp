@@ -6,7 +6,7 @@ import LaunchMealtem from './LaunchMealtem'
 
 interface Props {
 
-}  
+}
 
 const HomeMealPlanMenuTab = (props: Props) => {
     const [curtab, setcurtab] = useState(1)
@@ -16,16 +16,16 @@ const HomeMealPlanMenuTab = (props: Props) => {
 
                 <div className="flex-1 cursor-pointer  text-base font-bold">
 
-                    <button className={`flex-1 px-4  py-2 ${curtab === 1 ? " focus:border-0 ourline-none border-0 border-b-2 border-red-700 " : ""}`} 
-                    onClick={(e: any) => { setcurtab(1) }}>Breakfast</button></div>
+                    <button className={`flex-1 px-2 focus:outline-none  outline-none hover:outline-none  py-2 ${curtab === 1 ? " border-b  border-red-700  text-red-700 " : ""}`}
+                        onClick={(e: any) => { setcurtab(1) }}>Breakfast</button></div>
                 <div className="flex-1 cursor-pointer  text-base font-bold">
 
-                    <button className={`flex-1   px-4 py-2 ${curtab === 2 ? " border-b-2 border-red-700" : ""}`} 
-                    onClick={(e: any) => { setcurtab(2) }}>Lunch</button></div>
+                    <button className={`flex-1 px-2 focus:outline-none   py-2 ${curtab === 2 ? " border-b  border-red-700  text-red-700 " : ""}`}
+                        onClick={(e: any) => { setcurtab(2) }}>Lunch</button></div>
 
                 <div className="flex-1 cursor-pointer  text-base font-bold">
 
-                    <button className={`flex-1   px-4 py-2 ${curtab === 3 ? " border-b-2 border-red-700 " : ""}`} onClick={(e: any) => { setcurtab(3) }}>Dinner</button></div>
+                    <button className={`flex-1 px-2 focus:outline-none   py-2 ${curtab === 3 ? " border-b  border-red-700  text-red-700 " : ""}`} onClick={(e: any) => { setcurtab(3) }}>Dinner</button></div>
 
             </div>
             <div className="flex flex-col">
