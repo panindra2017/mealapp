@@ -13,17 +13,13 @@ export default function Home() {
 
       <div className="">
         <HomeBanner />
-
       </div>
 
       <div>
-
         <HomeMealPlanMenuTab />
       </div>
 
-
       <div><AccordianFaq/></div>
-
 
     </div></AppLayout>
 
