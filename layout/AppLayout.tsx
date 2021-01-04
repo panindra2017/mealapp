@@ -3,7 +3,7 @@ import { TopHeader } from "../components/header/TopHeader";
 
 export const AppLayout = ({ children, ...props }: any) => {
   return <div className="relative ">
-    <div className="top-header flex py-2"><TopHeader /> </div>
+    <div className="top-header flex  "><TopHeader /> </div>
     <div>{children}</div>
    
   </div>

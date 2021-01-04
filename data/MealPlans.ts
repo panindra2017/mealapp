@@ -3,8 +3,8 @@ export const mealplans = [{
     planType: "Breakfast",
     name: "Power Breankfast ",
     veg: true,
-    images: "/images/mealplan/power-breakfast-veg.jpg",
-    price: "",
+    images: "/images/mealplan/breakfast/power-breakfast-veg.jpg",
+    price: "Rs. 499",
     duration: "",
     description: "Wakey wakey, eggs & bakey! Kickstart your day with a protein-fuelled breakfast and a healthy side of carbs. Quesadillas, Bhurji, French Toast. We serve our eggs up in many exciting ways.",
     items: [{
@@ -62,7 +62,7 @@ export const mealplans = [{
     {
 
         id: 17,
-         name: "",
+        name: "",
         calorie: "",
         veg: true,
         images: "/images/mealplan/power-breakfast-veg.jpg",
@@ -99,8 +99,8 @@ export const mealplans = [{
     planType: "Breakfast",
     name: "Corn Fed Chicken",
     veg: false,
-    images: "/images/mealplan/power-breakfast-non-veg.jpg",
-    price: "",
+    images: "/images/mealplan/breakfast/power-breakfast-noveg.jpg",
+    price: "Rs. 899",
     duration: "",
     subscriptionPlan: [{
         id: 1004,
@@ -202,8 +202,8 @@ export const mealplans = [{
     planType: "Breakfast",
     name: "Diet Meal Plan",
     veg: true,
-    images: "/images/mealplan/diet-meal-plan-veg.jpg",
-    price: "",
+    images: "/images/mealplan/breakfast/weight-wise.jpg",
+    price: "Rs. 1299",
     duration: "",
     description: "Want a meal that's nutritious yet light on your stomach? This thali of egg curry, soft whole wheat parathas, cucumber carrot salad and crunchy sirka onions is not only packed with nutrients but also with deliciousness.",
     plans: [
@@ -234,10 +234,10 @@ export const mealplans = [{
 {
     id: 4,
     planType: "Breakfast",
-    name: "Diet Meal Plan ",
+    name: "Weight Wise Salad ",
     veg: false,
-    images: "/images/mealplan/diet-meal-plan-non-veg.jpg",
-    price: "",
+    images: "/images/mealplan/breakfast/weight-wise-salad.jpg",
+    price: "Rs. 599",
     duration: "",
     description: "Want a meal that's nutritious yet light on your stomach? This thali of egg curry, soft whole wheat parathas, cucumber carrot salad and crunchy sirka onions is not only packed with nutrients but also with deliciousness.",
     plans: [

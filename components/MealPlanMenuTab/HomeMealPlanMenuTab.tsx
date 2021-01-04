@@ -6,10 +6,9 @@ import LaunchMealtem from './LaunchMealtem'
 
 interface Props {
 
-}
+}  
 
 const HomeMealPlanMenuTab = (props: Props) => {
-
     const [curtab, setcurtab] = useState(1)
     return (
         <div className="flex flex-col">
