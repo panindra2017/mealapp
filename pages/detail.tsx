@@ -37,7 +37,7 @@ const detail = () => {
                 <img src={meatPlan ? meatPlan.images : "#"} />
             </div>
             <div className="flex my-2 flex-col -mt-4 mx-2 shadow-xl bg-white rounded-3xl">
-                <div className="text-2xl font-bold text-center py-2">{meatPlan ? meatPlan.name : ""}
+                <div className="text-2xl font-bold text-center py-4">{meatPlan ? meatPlan.name : ""}
                     {meatPlan && meatPlan.veg && meatPlan ? " - Veg" : "- Non Veg"}
                 </div>
                 <div className="text-sm px-4">

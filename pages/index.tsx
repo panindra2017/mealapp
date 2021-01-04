@@ -19,8 +19,8 @@ export default function Home() {
         <HomeMealPlanMenuTab />
       </div>
          
-      <div className="">
-        <img src="/images/banners/why-meal-box.png" style={{width:'100%'}} ></img></div>
+     {/*  <div className="">
+        <img src="/images/banners/why-meal-box.png" style={{width:'100%'}} ></img></div> */}
 
         <div className="  my-4 mb-4"><AccordianFaq /></div>
       <div className="my-2 px-16">
