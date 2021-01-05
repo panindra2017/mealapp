@@ -1,6 +1,6 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel';
-const HomeBanner = () => {
+const HomeSmallSlider = () => {
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -35,20 +35,20 @@ const HomeBanner = () => {
                 autoPlay={true}
                 autoPlaySpeed={10000}
                 keyBoardControl={true}
+                partialVisible={true}
                 customTransition="all .5"
                 transitionDuration={10}
-                partialVisible={true}
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["tablet", "mobile"]}
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
             >
-                <div className="mx-1"><img src="/images/banners/1.jpg" /></div>
-                <div className="mx-1"><img src="/images/banners/2.jpg" /></div>
-                <div className="mx-1"><img src="/images/banners/3.jpg" /></div>
+                <div className="mx-1"><img src="/images/banners/small-1.png" /></div>
+                <div className="mx-1"><img src="/images/banners/small-2.png" /></div>
+                <div className="mx-1"><img src="/images/banners/small-3.png" /></div>
             </Carousel>
         </div>
     )
 }
 
-export default HomeBanner
+export default HomeSmallSlider

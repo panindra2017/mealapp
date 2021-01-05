@@ -24,7 +24,7 @@ export const TopHeader = () => {
                 <Link href="/">
                 <img src="/images/boxmeal-logo.png" style={{width:"100px"}} className="cursor-pointer" /></Link></div>
                 <div className=" px-4 ">
-                <Link href="/signin">
+                <Link href="/dashboard">
                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-user" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <circle cx="12" cy="7" r="4" />

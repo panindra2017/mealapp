@@ -1,5 +1,6 @@
 import React from 'react'
 import HomeBanner from '../components/banners/HomeBanner'
+import HomeSmallSlider from '../components/banners/HomeSmallSlider'
 import AccordianFaq from '../components/FAQ/AccordianFaq'
 import Itemcard from '../components/Items/Itemcard'
 import HomeMealPlanMenuTab from '../components/MealPlanMenuTab/HomeMealPlanMenuTab'
@@ -11,11 +12,13 @@ export default function Home() {
   return (
     <AppLayout><div className="flex flex-col">
 
-      <div className="shadow-lg mb-2">
+      <div className="shadow-lg my-2">
         <HomeBanner />
       </div>
    
-      <div >
+      <div > <div className="shadow-lg   ">
+        <HomeSmallSlider />
+      </div>
         <HomeMealPlanMenuTab />
       </div>
          

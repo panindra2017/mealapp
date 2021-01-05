@@ -19,7 +19,7 @@ export default function Dashboard() {
   const router = useRouter();
   useEffect(() => {
     if (user === null || isSingIn === false || user === undefined) {
-      router.push(`/dashboard`)
+
     }
   }, [user])
 
@@ -34,8 +34,8 @@ export default function Dashboard() {
         <script type="https://cdn.jsdelivr.net/npm/react-apexcharts"></script>
       </Head>
 
-{!user&&<SinginComponent/>}
-      {user &&
+      {!user && <SinginComponent />}
+      {user !== null && isSingIn !== false && user !== undefined &&
         <div className="flex flex-col">
 
           <div className=" flex-1 ">

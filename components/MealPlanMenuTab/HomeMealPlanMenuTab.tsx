@@ -22,16 +22,20 @@ const HomeMealPlanMenuTab = (props: Props) => {
 
                     <button className={`flex-1 px-2 focus:outline-none   py-2 ${curtab === 2 ? " border-b  border-red-700  text-red-700 " : ""}`}
                         onClick={(e: any) => { setcurtab(2) }}>Lunch</button></div>
+  <div className="flex-1 cursor-pointer  text-base font-bold">
 
-                <div className="flex-1 cursor-pointer  text-base font-bold">
+<button className={`flex-1 px-2 focus:outline-none   py-2 ${curtab === 3 ? " border-b  border-red-700  text-red-700 " : ""}`}
+    onClick={(e: any) => { setcurtab(3) }}>Dinner</button></div>
+              {/*   <div className="flex-1 cursor-pointer  text-base font-bold">
 
-                    <button className={`flex-1 px-2 focus:outline-none   py-2 ${curtab === 3 ? " border-b  border-red-700  text-red-700 " : ""}`} onClick={(e: any) => { setcurtab(3) }}>Dinner</button></div>
+                    <button className={`flex-1 px-2 focus:outline-none   py-2 ${curtab === 3 ? " border-b  border-red-700  text-red-700 " : ""}`} onClick={(e: any) => { setcurtab(3) }}>Dinner</button></div> */}
 
             </div>
             <div className="flex flex-col">
                 {curtab === 1 && <div><BreakfastMealItem /></div>}
                 {curtab === 2 && <div><LaunchMealtem /></div>}
-                {curtab === 3 && <div><DinnerMealItem /></div>}
+                {curtab === 3 && <div><LaunchMealtem /></div>}
+    {/*             {curtab === 3 && <div><DinnerMealItem /></div>} */}
 
             </div>
         </div>
