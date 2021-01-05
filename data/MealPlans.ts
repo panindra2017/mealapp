@@ -71,10 +71,11 @@ export const mealplans = [{
     plans: [
         {
             subscribeId: 1001,
-            name: "Trail",
+            name: "Trail For A Week",
             duration: "7 Days",
             price: "199",
-            discount: "FREE"
+            discount: "FREE",
+            title:"Try For A Week"
 
         },
         {

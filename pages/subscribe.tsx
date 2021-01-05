@@ -11,8 +11,8 @@ import { useCookies } from 'react-cookie';
 const SubscribePage = () => {
     const router = useRouter();
     const [mealPlan, setMealPlan] = useState<any>()
-    const {  addToCart } = useContext(CartContext)
-    const [cookies,setCookie] = useCookies(['order'])
+    const { addToCart } = useContext(CartContext)
+    const [cookies, setCookie] = useCookies(['order'])
     const [, setsubscriptionPLan] = useState<any>(null)
     const [selectedPlan, setselectedPlan] = useState(null)
     const [itemid, setitemId] = useState<any>()
@@ -37,8 +37,6 @@ const SubscribePage = () => {
         }
     }
     function onSelect(data: any) {
-
-      
         addToCart({
             mealPlanName: mealPlan.name, mealPlanId: mealPlan.id, mealPlanQty: 1,
             mealSubscriptionPlanName: data.name, mealSuscriptionId: data.subscribeId
@@ -47,7 +45,7 @@ const SubscribePage = () => {
     }
 
     useEffect(() => {
-        console.log( " selected data plan",cookies.order)
+
     }, [selectedPlan, cookies.order])
     return (
         <AppLayout>
@@ -61,12 +59,14 @@ const SubscribePage = () => {
                         {mealPlan && mealPlan.veg && mealPlan ? " - Veg" : "- Non Veg"}
                     </div>
 
-                    <div className="py-8 px-4 ">
+                    <div className="py-4 px-4  text-center">
+
                         <div className="flex flex-col my-2 text-lg border-b py-4 border-red-800">
                             Choose Subscription Plan</div>
-                        <div className="flex flex-col my-2">
+                        <div className="flex  flex-col my-2">
                             {mealPlan && mealPlan.plans && mealPlan.plans.map((item: any) => {
-                                return <div className={ ` cursor-pointer ${selectedPlan && selectedPlan.subscribeId === item.subscribeId ? 'bg-green-500' : ""}`}><RateCard {...item} onSelect={() => { onSelect({ name: item.name, subscribeId: item.subscribeId }) }} /> </div>
+                                return <div className={` ${selectedPlan && selectedPlan.subscribeId === item.subscribeId ? 'bg-green-50' : ""}`}>
+                                     <RateCard {...item} isSelected={selectedPlan && selectedPlan.subscribeId === item.subscribeId?true:false } onSelect={() => { onSelect({ name: item.name, subscribeId: item.subscribeId }) }} /> </div>
 
                             })}
 
