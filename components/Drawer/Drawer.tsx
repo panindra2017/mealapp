@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react'
 import style from './drawer.module.css'
-import { DrawerAccessContext } from '../../core/DrawerManager/DrawerManager'
-import SideNavDrawer from './SideNavDrawer';
-import CartDrawer from './CartDrawer';
-import SideAccount from './SideAccount';
-import SearchDrawer from './SearchDrawer';
+import { DrawerAccessContext } from './DrawerManager';
+ 
 import ScrollLock from 'react-scrolllock';
+ 
+ 
+ 
 interface Props {
 
 }
@@ -20,10 +20,8 @@ const Drawer = (props: Props) => {
 
                 <React.Fragment><ScrollLock isActive={isDrawerOpen} /></React.Fragment>
             <div className={style.drawerContainer}>
-                {isDrawerOpen && drawerContent === "SIDENAV" && <SideNavDrawer />}
-                {isDrawerOpen && drawerContent === "SIDECART" && <CartDrawer />}
-                {isDrawerOpen && drawerContent === "SIDEACCOUNT" && <SideAccount />}
-                {isDrawerOpen && drawerContent === "SEARCHDRAWER" && <SearchDrawer />}
+            {/*     {isDrawerOpen && drawerContent === "SIDENAV" && <SideNavDrawer />} */}
+          
 
             </div>
         </div>
