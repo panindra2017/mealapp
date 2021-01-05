@@ -11,9 +11,6 @@ const RateCard = (props: any) => {
             <div className="flex-1 my-4"></div><div className=" ">{props.duration}  Rs. {props.price} / Week</div>
         </div>
         <div className=" text-xl text-gray-600">{props.isSelected ? <TickSvg stroke="green" strokeWidth={2} size={32} /> : ""}</div>
-
-
-
     </div>
     )
 }
