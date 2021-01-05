@@ -1,28 +1,33 @@
 import { useRouter } from 'next/dist/client/router';
 import React from 'react'
 import SinginComponent from '../components/Signin/SinginComponent'
+import { UserData } from '../data/UserSubscriptionData';
 import { AppLayout } from '../layout/AppLayout'
-
 
 export default function SigninPage() {
   const router = useRouter();
 
-  function onSignin(data:any){
+  function onSignin(data: any) {
 
-   
-      if (data !== null) {
-          router.push(`/dashboard`)
-      }
- 
+    const _username = UserData.username;
+    const _password = UserData.password;
+    if (data.username === _username && data.password === _password) {
+      router.push(`/dashboard`)
+    }
+    else {
+
+      alert("please check your details")
+    }
+
   }
   return (
-    <AppLayout><div className="flex flex-col">
+    <AppLayout><div className="">
 
-      <div className="flex">
-        <SinginComponent  onSignin={(e:any)=>{onSignin()}}/>
+      <div className="flex w-full px-4 my-4">
+        <SinginComponent onSignin={(data: any) => { onSignin(data) }} />
       </div>
-      </div>
-     </AppLayout>
+    </div>
+    </AppLayout>
 
   )
 }

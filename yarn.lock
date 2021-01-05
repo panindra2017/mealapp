@@ -1133,6 +1133,13 @@
   dependencies:
     mkdirp "^1.0.4"
 
+"@reactchartjs/react-chart.js@^1.0.0-rc.3":
+  version "1.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/@reactchartjs/react-chart.js/-/react-chart.js-1.0.0-rc.3.tgz#6dc4a5a7107e6d4311351aa9d1068e5fdb4d7328"
+  integrity sha512-GSu4ny7n8AANI0G9D/0n1XK5XsErwTpxhOtL61JFWe6UQzyRWyOQ3brwLmRpycHMqyzVVR6ZKg22h5hW9amLkQ==
+  dependencies:
+    lodash "^4.17.19"
+
 "@types/cookie@^0.3.3":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@types/cookie/-/cookie-0.3.3.tgz#85bc74ba782fb7aa3a514d11767832b0e3bc6803"

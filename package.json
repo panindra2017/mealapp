@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@reactchartjs/react-chart.js": "^1.0.0-rc.3",
     "apexcharts": "^3.23.1",
     "autoprefixer": "^10.1.0",
     "cookie": "^0.4.1",

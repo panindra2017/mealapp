@@ -7,30 +7,30 @@ const CircleGraph = dynamic(
     () => import('./CircleGraph'),
     { ssr: false }
 )
-interface Props {
 
-}
+const NutritionChart = () => {
+    return (<div className="flex  flex-col text-lg ">
+        <div className="flex-1 flex flex-col   mx-1 my-4 ">
+         
+            <div className="flex-1  flex flex-row text-xs">
+                <div className=" flex-1 px-2 shadow-lg p-2"> <div className="px-2">Carbohydrates </div>
+                <div className="px-2 font-bold">48 gms </div>  </div>
+                <div className=" flex-1 px-2 shadow-lg p-2"> <div className="px-2">Fat </div>
+                    <div className="px-2 font-bold">32 gms </div>  </div>
 
-const NutritionChart = (props: Props) => {
-    return (<div className="flex  flex-col">
-        <div className="flex  text-xl  font-bold px-4 py-4 border-b my-2">This Week Nutrition Tracker </div>
-        <div className="flex  flex-col ">
+                <div className=" flex-1 px-2 shadow-lg p-2"> <div className="px-2">Protiens </div>
+                <div className="px-2 font-bold">74 gms </div>  </div>
+
+            </div></div>
+        <div className="flex-1 flex  items-center mx-1 my-4 ">
             <div className="flex-1 flex flex-col items-center mx-1 shadow-lg"> <div className="flex "><CircleGraph label={"Carbs"} value={70} /></div>
-                <div className="flex text-xs -mt-4 ">1245 Kcal </div> </div>
-            <div className="flex-1 flex flex-col items-center mx-1 shadow-lg"> <div className="flex "><CircleGraph label={"Fat"} value={5} /></div>
-                <div className="flex text-xs -mt-4 ">1352 Kcal </div> </div>
+                <div className="flex text-xs -mt-4 py-4 ">Carbs (Kcal) </div> </div>
+            <div className="flex-1 flex flex-col items-center mx-1 shadow-lg">
+
+                <div className="flex "><CircleGraph label={"Fat"} value={5} /></div>
+                <div className="flex text-xs -mt-4 py-4">Fat  (Kcal) </div> </div></div>
 
 
-        </div>
-        <div className="flex  shadow-xl flex-col ">
-        <div className="flex  text-xl  font-bold px-4 py-4 border-b my-2">Overall Calorie In this Week</div>
-        <div className="flex  flex-col ">
-            <div className="flex-1 flex flex-col items-center mx-1 shadow-lg"> <div className="flex "><CircleGraph label={"Carbs"} value={70} /></div>
-                <div className="flex text-xs -mt-4 ">1245 Kcal / 2500 Kcal ( ) </div> </div>
-            
-
-                </div>
-        </div>
     </div>
     )
 }

@@ -10,7 +10,7 @@ interface Props {
   value?: any
 }
 
-const CircleGraph = ({ lowSeries, normalSeries, hightSeries, pointer, chartOptions, label, value }: Props) => {
+const CircleGraph = ({ label, value }: Props) => {
 
   var option = {
 
@@ -43,18 +43,19 @@ const CircleGraph = ({ lowSeries, normalSeries, hightSeries, pointer, chartOptio
         }
       },
       fill: {
-        type: 'gradient',
+
+        colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#FF9800'],
         gradient: {
-          shade: 'dark',
           shadeIntensity: 0.25,
-          inverseColors: true,
+          gradientToColors: ["#000", "#ffbf00", "#c9de00"],
+          inverseColors: false,
           opacityFrom: 1,
           opacityTo: 1,
-          stops: [0, 50, 65, 91]
+          stops: [0, 40, 70, 91]
         },
       },
       stroke: {
-        dashArray: 5
+        dashArray: 2
       },
       labels: [label],
     },
@@ -69,7 +70,7 @@ const CircleGraph = ({ lowSeries, normalSeries, hightSeries, pointer, chartOptio
       <Chart
         options={option.options}
         series={option.series}
-        type="radialBar" 
+        type="radialBar"
 
       />
     </React.Fragment>

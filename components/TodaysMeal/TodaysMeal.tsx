@@ -1,4 +1,5 @@
 import React from 'react'
+import TodayItems from '../TodayItems/TodayItems'
 
 interface Props {
 
@@ -7,9 +8,7 @@ interface Props {
 const TodaysMeal = (props: Props) => {
     return (
         <div className="flex flex-row">
-            <div></div>
-            <div></div>
-            <div></div>
+            
         </div>
     )
 }

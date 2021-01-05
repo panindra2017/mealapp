@@ -7,12 +7,10 @@ interface Props {
 
 const SinginComponent = ({onSignin}: any) => {
     return (
-        <div>
-             <div className="flex flex-row  my-4">
-                    <SingInForm onSignin={onSignin}/>
-                </div>
-        </div>
-    )
+        <React.Fragment>  <SingInForm onSignin={onSignin}/></React.Fragment>)
+        
+                  
+        
 }
 
 export default SinginComponent
