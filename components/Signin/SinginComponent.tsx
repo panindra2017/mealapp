@@ -5,11 +5,11 @@ interface Props {
     
 }
 
-const SinginComponent = (props: Props) => {
+const SinginComponent = ({onSignin}: any) => {
     return (
         <div>
              <div className="flex flex-row  my-4">
-                    <SingInForm />
+                    <SingInForm onSignin={onSignin}/>
                 </div>
         </div>
     )
