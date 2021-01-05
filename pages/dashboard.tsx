@@ -1,18 +1,27 @@
 import React from 'react'
-import { useState } from 'react'
 import CustomerProfile from '../components/CustomerProfile/CustomerProfile'
 import { AppLayout } from '../layout/AppLayout'
 import _ from 'lodash';
 import Head from 'next/head'
-import NutritionChart from '../components/Graphs/NutritionChart';
 import CustomerDeliveryAddresses from '../components/CustomerProfile/CustomerDeliveryAddresses';
-import TodaysMeal from '../components/TodaysMeal/TodaysMeal';
 import TodayItems from '../components/TodayItems/TodayItems';
 import NutritionTab from '../components/DashboardComponents/NutritionTab';
+import { AuthenticationContext } from '../components/authentication/AuthenticationProvider';
+import { useContext } from 'react';
+import { useEffect } from 'react';
+import { useRouter } from 'next/dist/client/router';
+import SinginComponent from '../components/Signin/SinginComponent';
 
 
 export default function Dashboard() {
-  const [] = useState<any>()
+  const { user, isSingIn } = useContext(AuthenticationContext)
+
+  const router = useRouter();
+  useEffect(() => {
+    if (user === null || isSingIn === false || user === undefined) {
+      router.push(`/dashboard`)
+    }
+  }, [user])
 
   return (
     <AppLayout>
@@ -25,28 +34,30 @@ export default function Dashboard() {
         <script type="https://cdn.jsdelivr.net/npm/react-apexcharts"></script>
       </Head>
 
+{!user&&<SinginComponent/>}
+      {user &&
+        <div className="flex flex-col">
 
-      <div className="flex flex-col">
+          <div className=" flex-1 ">
+            <CustomerProfile user={user} />
+          </div>
+          <div className=" flex-1 ">
+            <TodayMenu user={user} />
+          </div>
+          <div className=" flex-1 ">
+            <CustomerDeliveryAddresses user={user} />
+          </div>
+          <div className=" flex-1 my-4">
+            <NutritionTab user={user} />
+          </div>
 
-        <div className=" flex-1 ">
-          <CustomerProfile />
-        </div>
-        <div className=" flex-1 ">
-          <TodayMenu />
-        </div>
-        <div className=" flex-1 ">
-          <CustomerDeliveryAddresses />
-        </div>
-        <div className=" flex-1 my-4">
-          <NutritionTab />
-        </div>
-      </div></AppLayout>
+        </div>}</AppLayout>
 
   )
 }
 
 
-const TodayMenu = () => {
+const TodayMenu = ({ user }: any) => {
 
   return <React.Fragment>
     <div className="flex flex-col  px-4 ">

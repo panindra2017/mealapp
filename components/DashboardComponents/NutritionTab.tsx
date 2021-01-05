@@ -2,11 +2,9 @@ import React, { useState } from 'react'
 import NutritionChart from '../Graphs/NutritionChart'
 
 
-interface Props {
+ 
 
-}
-
-const NutritionTab = (props: Props) => {
+const NutritionTab = ({user}: any) => {
     const [curtab, setcurtab] = useState(1)
     return (
         <div className="flex flex-col">

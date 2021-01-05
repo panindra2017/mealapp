@@ -3,9 +3,8 @@ import { UserData } from '../../data/UserSubscriptionData';
 import TickSvg from '../common/svgs/TickSvg';
 
 
-const CustomerDeliveryAddresses = () => {
-    const user = UserData;
-
+const CustomerDeliveryAddresses = ({user}:any) => {
+     
     const [selectedAddres] = useState(0)
 
 

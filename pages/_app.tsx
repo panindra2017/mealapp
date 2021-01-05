@@ -9,9 +9,11 @@ import "react-datetime/css/react-datetime.css";
 import { CookiesProvider } from "react-cookie"
 import CartContextProvider from '../components/Cart/CartContextProvider';
 import React from 'react';
+import AuthenticationProvider from '../components/authentication/AuthenticationProvider';
 function MyApp({ Component, pageProps }: AppProps) {
   return <CookiesProvider>
-    <CartContextProvider> <Component {...pageProps} /></CartContextProvider></CookiesProvider>
+    <AuthenticationProvider>
+    <CartContextProvider> <Component {...pageProps} /></CartContextProvider></AuthenticationProvider></CookiesProvider>
 }
 
  

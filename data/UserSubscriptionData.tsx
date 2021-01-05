@@ -1,6 +1,6 @@
 export const UserData = {
     username: "panindra",
-    password: "123demo",
+    password: "123",
     profileName: "Panindra K R",
     email: "panindrakr@gmail.com",
     mobile: "8884255542",
