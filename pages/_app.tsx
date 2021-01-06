@@ -10,12 +10,13 @@ import { CookiesProvider } from "react-cookie"
 import CartContextProvider from '../components/Cart/CartContextProvider';
 import React from 'react';
 import AuthenticationProvider from '../components/authentication/AuthenticationProvider';
+import PageStateManager from '../components/PageContextManager';
 function MyApp({ Component, pageProps }: AppProps) {
-  return <CookiesProvider>
+  return <CookiesProvider> <PageStateManager>
     <AuthenticationProvider>
-    <CartContextProvider> <Component {...pageProps} /></CartContextProvider></AuthenticationProvider></CookiesProvider>
+      <CartContextProvider> <Component {...pageProps} /></CartContextProvider></AuthenticationProvider></PageStateManager></CookiesProvider>
 }
 
- 
+
 
 export default MyApp

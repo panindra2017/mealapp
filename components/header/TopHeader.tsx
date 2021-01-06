@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Link from 'next/link'
+import { PageStateContext } from '../PageContextManager';
 
 export const TopHeader = () => {
+  
+
+  const { PageState, PageStateAction, menuItems } = useContext(PageStateContext);
+  function toggleFunction(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
+    
+    e.preventDefault();
+    PageStateAction({ type: "toggleSidebar" });
+  }
     return (
         <div className="flex flex-wrap    items-center shadow-lg w-full py-2 bg-gray-800">
-              <div className="px-4 ">
+              <div className="px-4 cursor-pointer " onClick={toggleFunction}>
               <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-menu-2" 
                  width="34"
                  height="34" 

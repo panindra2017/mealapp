@@ -10,7 +10,7 @@ interface Props {
 
 }
 
-const Drawer = (props: Props) => {
+const Drawer = (props: any) => {
     const { openDrawer, closerDrawer, isDrawerOpen, position, setPosition, drawerContent } = useContext(DrawerAccessContext);
     useEffect(() => {
 
