@@ -33,14 +33,14 @@ const SubscribePage = () => {
     }
 
     useEffect(() => {
-       
+       console.log(orders)
     }, [orders])
     return (
         <AppLayout>
 
             <div className="flex flex-col">
-                <div className="flex flex-col my-4 py-8  shadow items-center">
-                    <div><OrderSummary {...orders} /></div>
+                <div className="flex my-4 py-4  px-4">
+                    <OrderSummary {...orders} />
                 </div>
                 <div className="flex flex-row  my-4">
                     <ContactForm />
@@ -49,7 +49,7 @@ const SubscribePage = () => {
                     <AddressForm />
                 </div>
                 <div className="flex flex-col px-8 items-center shadow my-4 py-2" >
-                    <div className=" flex-1 my-2">Subscription Start Date </div>
+                    <div className=" flex-1 my-2">Choose  Start  Delviery Date </div>
                     <div className="border p-1 flex">
                         <div className="px-2"><DatePicker selected={startDate} onChange={(date: any) => setStartDate(date)} placeholderText="Pick a date to start delivering orders " /></div>
                         <div className="px-2"><EditSvg size={24} /></div>

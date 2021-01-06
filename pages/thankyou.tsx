@@ -37,11 +37,11 @@ const PaymentPage = () => {
         <AppLayout>
 
             <div className="flex flex-col">
-                <div className="flex flex-col my-4 py-8  shadow items-center">
 
 
-                    <div><ThankyouWithSummary /></div>
-                </div>
+
+                <div><ThankyouWithSummary /></div>
+
 
             </div>
 

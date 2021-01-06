@@ -39,39 +39,34 @@ const SubscribePage = () => {
     function onSelect(data: any) {
         addToCart({
             mealPlanName: mealPlan.name, mealPlanId: mealPlan.id, mealPlanQty: 1,
-            planImage:data.image,
+            planImage: data.image,
             mealSubscriptionPlanName: data.name, mealSuscriptionId: data.subscribeId
         })
         setselectedPlan(data)
     }
 
     useEffect(() => {
-
+console.log("cookies.order",cookies.order)
     }, [selectedPlan, cookies.order])
     return (
         <AppLayout>
 
             <div className="flex flex-col">
-                <div className=" w-full -mt-4">
+                <div className="w-full -mt-4">
                     <img src={mealPlan ? mealPlan.images : "#"} />
                 </div>
                 <div className="flex my-2 flex-col -mt-4 mx-2 shadow-xl bg-white rounded-3xl">
                     <div className="text-2xl font-bold text-center py-2">{mealPlan ? mealPlan.name : ""}
                         {mealPlan && mealPlan.veg && mealPlan ? " - Veg" : "- Non Veg"}
                     </div>
-
-                    <div className="py-4 px-4  text-center">
-
-                        <div className="flex flex-col my-2 text-lg border-b py-4 border-red-800">
+                   <div className="py-4 px-4  text-center">
+                       <div className="flex flex-col my-2 text-lg border-b py-4 border-red-800">
                             Choose Subscription Plan</div>
                         <div className="flex  flex-row flex-wrap my-2">
                             {mealPlan && mealPlan.plans && mealPlan.plans.map((item: any) => {
-                                return <div className={` w-1/2 my-4  cursor-pointer ${selectedPlan && selectedPlan.subscribeId === item.subscribeId ? 'bg-green-50' : ""}`}>
-                                    <RateCard {...item} isSelected={selectedPlan && selectedPlan.subscribeId === item.subscribeId ? true : false} onSelect={() => { onSelect({ name: item.name, subscribeId: item.subscribeId }) }} /> </div>
-
+                                return <div className={`w-1/2 my-4  cursor-pointer ${selectedPlan && selectedPlan.subscribeId === item.subscribeId ? 'bg-green-50' : ""}`}>
+                                   <RateCard {...item} isSelected={selectedPlan && selectedPlan.subscribeId === item.subscribeId ? true : false} onSelect={() => { onSelect({ name: item.name, image: mealPlan.images, subscribeId: item.subscribeId }) }} /> </div>
                             })}
-
-
                         </div>
                     </div>
                     <div className="py-8 px-4 "><BuyNowButton onSubmit={(e: any) => { onsubmit(e) }} /></div>
