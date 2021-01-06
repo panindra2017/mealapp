@@ -8,8 +8,7 @@ export const TopHeader = () => {
   const { PageState, PageStateAction, menuItems } = useContext(PageStateContext);
   function toggleFunction(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
     
-    e.preventDefault();
-    PageStateAction({ type: "toggleSidebar" });
+    
   }
     return (
         <div className="flex flex-wrap    items-center shadow-lg w-full py-2 bg-gray-800">
