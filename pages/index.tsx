@@ -2,6 +2,7 @@ import React from 'react'
 import HomeBanner from '../components/banners/HomeBanner'
 import HomeSmallSlider from '../components/banners/HomeSmallSlider'
 import AccordianFaq from '../components/FAQ/AccordianFaq'
+import Howitwork from '../components/HowItWorks/Howitwork'
 import Itemcard from '../components/Items/Itemcard'
 import HomeMealPlanMenuTab from '../components/MealPlanMenuTab/HomeMealPlanMenuTab'
 import WhySubscribeScroller from '../components/whysubscribe/WhySubscribeScroller'
@@ -24,7 +25,7 @@ export default function Home() {
 
       {/*  <div className="">
         <img src="/images/banners/why-meal-box.png" style={{width:'100%'}} ></img></div> */}
-
+  <div className="py-8 px-4 "><Howitwork /></div>
       <div className="  my-4 mb-4"><AccordianFaq /></div>
       <div className="my-2 px-16">
         <img src="/images/app-store.png" ></img></div>
