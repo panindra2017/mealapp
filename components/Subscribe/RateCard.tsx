@@ -3,14 +3,14 @@ import TickSvg from '../common/svgs/TickSvg'
 
 
 const RateCard = (props: any) => {
-    return (<div className="flex flex-row w-full shadow-lg  items-center" onClick={(e: any) => { props.onSelect(e) }}>
+    return (<div className="mx-1 flex flex-row w-full shadow-lg  items-center px-4" onClick={(e: any) => { props.onSelect(e) }}>
 
 
         <div className={`flex-1 flex-row py-4 items-start `} >
-            <div className="flex-1 text-xl text-gray-600">{props.title}</div>
-            <div className="flex-1 my-4"></div><div className=" ">{props.duration}  Rs. {props.price} / Week</div>
+            <div className="flex-1  text-gray-600">{props.title}</div>
+            <div className="flex-1 my-4">{props.duration} </div><div className="text-sm "> Rs. {props.price} / Week</div>
         </div>
-        <div className=" text-xl text-gray-600">{props.isSelected ? <TickSvg stroke="green" strokeWidth={2} size={32} /> : ""}</div>
+        {props.isSelected ? <div className="  text-gray-600 rounded-full  bg-green-800 p-1"><TickSvg stroke="white" strokeWidth={2} size={16} /></div> : ""}
     </div>
     )
 }
