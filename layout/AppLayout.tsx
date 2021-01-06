@@ -8,6 +8,6 @@ export const AppLayout = ({ children, ...props }: any) => {
     <div className="top-header flex  "><TopHeader /> </div>
     <div>{children}</div>
     <div className="top-header flex  "><Footer /> </div>
-    <DrawerContainer />
+   
   </div>
 };
