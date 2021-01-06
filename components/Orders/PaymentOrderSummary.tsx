@@ -7,7 +7,7 @@ interface Props {
 
 const PaymentOrderSummary = (props: any) => {
 
-    const curMealPlan = _.find(mealplans, { 'id': props.id})
+    const curMealPlan = _.find(mealplans, { 'id': props.id })
     return (
         <div className="flex flex-col hadow-2xl  p-2 uppercase py-4 text-base ">
             <div className="border-b my-2 py-4"> Review Order before Payment </div>

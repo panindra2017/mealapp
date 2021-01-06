@@ -15,6 +15,7 @@ const CartContextProvider = ({ children }: any) => {
         setCookie('order', null, { path: '/' });
         setCookie('order', {
             mealPlanName: data.mealPlanName, mealPlanId: data.mealPlanId, mealPlanQty: data.mealPlanQty,
+            mealImage:data.planImage,
             mealSubscriptionPlanName: data.mealSubscriptionPlanName, mealSuscriptionId: data.mealSuscriptionId
         }, { path: '/' });
 

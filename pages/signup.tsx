@@ -19,11 +19,9 @@ const SubscribePage = () => {
     const [startDate, setStartDate] = useState(new Date());
     const [orders, setorders] = useState(null)
     const router = useRouter();
-    const { addToCart } = useContext(CartContext)
-    const [cookies] = useCookies(['order'])
+     const [cookies] = useCookies(['order'])
     useEffect(() => {
         if (cookies.order !== null) {
-
             setorders(cookies.order)
         }
     }, [cookies])
@@ -35,7 +33,7 @@ const SubscribePage = () => {
     }
 
     useEffect(() => {
-        console.log("orders ", orders)
+       
     }, [orders])
     return (
         <AppLayout>

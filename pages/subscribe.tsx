@@ -39,6 +39,7 @@ const SubscribePage = () => {
     function onSelect(data: any) {
         addToCart({
             mealPlanName: mealPlan.name, mealPlanId: mealPlan.id, mealPlanQty: 1,
+            planImage:data.image,
             mealSubscriptionPlanName: data.name, mealSuscriptionId: data.subscribeId
         })
         setselectedPlan(data)

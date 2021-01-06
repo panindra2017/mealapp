@@ -2,11 +2,8 @@ import React from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../Cart/CartContextProvider'
 
-interface Props {
 
-}
-
-const OrderTotalSummary = (props: any) => {
+const OrderTotalSummary = () => {
 
     const { orderTotalSummary } = useContext(CartContext)
 
