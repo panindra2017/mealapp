@@ -20,8 +20,8 @@ const CustomerDeliveryAddresses = ({user}:any) => {
         <div className='flex-1 px-4'>
             <div className='flex my-2 px-4 py-1 font-bold'> Delivery Address   </div>
             <div className='flex  flex-col  py-1 '>
-                <div className="flex  flex-col">{<DeliveryAddress data={user.deliveryAddress[0]} />}</div>
-                <div className="flex  flex-col">{<DeliveryAddress data={user.deliveryAddress[1]} />}</div>
+                <div className="flex  flex-col">{user&&user.deliveryAddress&&<DeliveryAddress data={user.deliveryAddress[0]} />}</div>
+                <div className="flex  flex-col">{user&&user.deliveryAddress&&<DeliveryAddress data={user.deliveryAddress[1]} />}</div>
             </div>
 
 

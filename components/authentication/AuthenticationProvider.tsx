@@ -8,23 +8,27 @@ export const AuthenticationContext = React.createContext({} as any);
 const AuthenticationProvider = ({ children }: any) => {
     const [cookies, setCookie] = useCookies(['user'])
     const router = useRouter();
-    const [user, setUser] = useState<any>(null)
+    const [user, setUser] = useState<any>()
     const [isSingIn, setisSingIn] = useState(false)
+
+    useEffect(() => {
+        setUser(cookies.user)
+    }, [])
     useEffect(() => {
         if (cookies.user !== null) {
-            setUser(cookies.user)
             setisSingIn(true)
-            router.push(`/`)
+            setUser(cookies.user)
         }
         else {
             setisSingIn(false)
         }
     }, [cookies.user])
     function signIn() {
+        console.log("singin")
         setCookie('user', UserData, { path: '/' });
     }
     function signOut() {
-        setCookie('user', null, { path: '/' });
+        setCookie('user', undefined, { path: '/' });
         router.push(`/`)
     }
     return (

@@ -83,7 +83,8 @@ export const mealplans = [{
             name: "Weekly",
             duration: "7 Days",
             price: "499",
-            discount: "499"
+            discount: "499",
+            title:"Weekly"
 
         },
         {
@@ -91,7 +92,8 @@ export const mealplans = [{
             name: "Monthly",
             duration: "30 Days",
             price: "1499",
-            discount: "1299"
+            discount: "1299",
+            title:"Monthly"
 
         }
     ]

@@ -65,7 +65,7 @@ const SubscribePage = () => {
                             Choose Subscription Plan</div>
                         <div className="flex  flex-col my-2">
                             {mealPlan && mealPlan.plans && mealPlan.plans.map((item: any) => {
-                                return <div className={` w-full ${selectedPlan && selectedPlan.subscribeId === item.subscribeId ? 'bg-green-50' : ""}`}>
+                                return <div className={` w-1/2 cursor-pointer ${selectedPlan && selectedPlan.subscribeId === item.subscribeId ? 'bg-green-50' : ""}`}>
                                     <RateCard {...item} isSelected={selectedPlan && selectedPlan.subscribeId === item.subscribeId ? true : false} onSelect={() => { onSelect({ name: item.name, subscribeId: item.subscribeId }) }} /> </div>
 
                             })}

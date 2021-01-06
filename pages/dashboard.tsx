@@ -18,11 +18,31 @@ export default function Dashboard() {
 
   const router = useRouter();
   useEffect(() => {
-    if (user === null || isSingIn === false || user === undefined) {
+    console.log("current user", user)
 
-    }
   }, [user])
 
+
+  if (!user||user==='undefined') {
+
+    return (
+      <AppLayout>
+        <Head>
+          <title>Boxmeal - Customer Dashboard</title>
+          {/* Meta tags */}
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+          {/* jQuery first, then Popper.js, then Bootstrap JS */}
+          <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+          <script type="https://cdn.jsdelivr.net/npm/react-apexcharts"></script>
+        </Head>
+
+        <SinginComponent />
+
+      </AppLayout>
+    )
+
+
+  }
   return (
     <AppLayout>
       <Head>
@@ -34,24 +54,23 @@ export default function Dashboard() {
         <script type="https://cdn.jsdelivr.net/npm/react-apexcharts"></script>
       </Head>
 
-      {!user && <SinginComponent />}
-      {user !== null && isSingIn !== false && user !== undefined &&
-        <div className="flex flex-col">
 
-          <div className=" flex-1 ">
-            <CustomerProfile user={user} />
-          </div>
-          <div className=" flex-1 ">
-            <TodayMenu user={user} />
-          </div>
-          <div className=" flex-1 ">
-            <CustomerDeliveryAddresses user={user} />
-          </div>
-          <div className=" flex-1 my-4">
-            <NutritionTab user={user} />
-          </div>
+      <div className="flex flex-col">
 
-        </div>}</AppLayout>
+        <div className=" flex-1 ">
+          <CustomerProfile user={user} />
+        </div>
+        <div className=" flex-1 ">
+          <TodayMenu user={user} />
+        </div>
+        <div className=" flex-1 ">
+          <CustomerDeliveryAddresses user={user} />
+        </div>
+        <div className=" flex-1 my-4">
+          <NutritionTab user={user} />
+        </div>
+
+      </div> </AppLayout>
 
   )
 }
